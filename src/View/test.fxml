@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="515.0" maxWidth="821.0" minHeight="467.0" minWidth="681.0" prefHeight="467.0" prefWidth="757.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.RunFormController">
+    <children>
+        <Label layoutX="70.0" layoutY="23.0" text="Heap Table" />
+        <Label layoutX="253.0" layoutY="14.0" text="Output" />
+        <Label layoutX="439.0" layoutY="14.0" text="File Table" />
+        <Label layoutX="334.0" layoutY="373.0" text="Program state identifiers" />
+        <ListView fx:id="programStateListView" layoutX="211.0" layoutY="339.0" prefHeight="104.0" prefWidth="522.0" />
+        <Label layoutX="333.0" layoutY="225.0" text="Execution stack" />
+        <Label layoutX="608.0" layoutY="14.0" text="Symbols Table" />
+        <TextField fx:id="numberOfProgramStatesTextField" layoutX="39.0" layoutY="368.0" prefHeight="26.0" prefWidth="122.0" />
+        <Label layoutX="30.0" layoutY="339.0" text="Number of program states" />
+        <Button fx:id="executeOneStepButton" layoutX="35.0" layoutY="407.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="130.0" text="Execute one step" />
+        <HBox layoutX="14.0" layoutY="41.0" prefHeight="172.0" prefWidth="720.0">
+            <children>
+                <TableView fx:id="heapTableView" prefHeight="200.0" prefWidth="180.0">
+                    <columns>
+                        <TableColumn fx:id="heapAddressColumn" prefWidth="84.0" text="Address" />
+                        <TableColumn fx:id="heapValueColumn" prefWidth="95.0" text="Value" />
+                    </columns>
+                </TableView>
+                <ListView fx:id="outputListView" prefHeight="200.0" prefWidth="180.0" />
+                <ListView fx:id="fileListView" prefHeight="200.0" prefWidth="180.0" />
+                <TableView fx:id="symbolTableView" prefHeight="200.0" prefWidth="180.0">
+                    <columns>
+                        <TableColumn fx:id="symbolTableVariableColumn" prefWidth="88.0" text="Variable" />
+                        <TableColumn fx:id="symbolTableValueColumn" prefWidth="91.0" text="Value" />
+                    </columns>
+                </TableView>
+            </children>
+        </HBox>
+        <ListView fx:id="executionStackListView" layoutX="14.0" layoutY="246.0" prefHeight="84.0" prefWidth="720.0" />
+    </children>
+</AnchorPane>
